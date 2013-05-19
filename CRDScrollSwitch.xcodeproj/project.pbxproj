@@ -18,6 +18,9 @@
 		92F22DAD17487A43007C9120 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F22DAC17487A43007C9120 /* Default-568h@2x.png */; };
 		92F22DB017487A43007C9120 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F22DAE17487A43007C9120 /* MainStoryboard.storyboard */; };
 		92F22DB317487A43007C9120 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F22DB217487A43007C9120 /* DemoViewController.m */; };
+		92F22DBE17487D3B007C9120 /* CRDScrollSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F22DBB17487D3B007C9120 /* CRDScrollSwitch.m */; };
+		92F22DBF17487D3B007C9120 /* CRDScrollSwitch.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F22DBC17487D3B007C9120 /* CRDScrollSwitch.png */; };
+		92F22DC017487D3B007C9120 /* CRDScrollSwitch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F22DBD17487D3B007C9120 /* CRDScrollSwitch@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,10 @@
 		92F22DAF17487A43007C9120 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		92F22DB117487A43007C9120 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		92F22DB217487A43007C9120 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		92F22DBA17487D3B007C9120 /* CRDScrollSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDScrollSwitch.h; sourceTree = "<group>"; };
+		92F22DBB17487D3B007C9120 /* CRDScrollSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDScrollSwitch.m; sourceTree = "<group>"; };
+		92F22DBC17487D3B007C9120 /* CRDScrollSwitch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CRDScrollSwitch.png; sourceTree = "<group>"; };
+		92F22DBD17487D3B007C9120 /* CRDScrollSwitch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CRDScrollSwitch@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +90,7 @@
 		92F22D9C17487A43007C9120 /* CRDScrollSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				92F22DB917487D3B007C9120 /* Classes */,
 				92F22DA517487A43007C9120 /* DemoAppDelegate.h */,
 				92F22DA617487A43007C9120 /* DemoAppDelegate.m */,
 				92F22DAE17487A43007C9120 /* MainStoryboard.storyboard */,
@@ -105,6 +113,17 @@
 				92F22DAC17487A43007C9120 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92F22DB917487D3B007C9120 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				92F22DBA17487D3B007C9120 /* CRDScrollSwitch.h */,
+				92F22DBB17487D3B007C9120 /* CRDScrollSwitch.m */,
+				92F22DBC17487D3B007C9120 /* CRDScrollSwitch.png */,
+				92F22DBD17487D3B007C9120 /* CRDScrollSwitch@2x.png */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +183,8 @@
 				92F22DAB17487A43007C9120 /* Default@2x.png in Resources */,
 				92F22DAD17487A43007C9120 /* Default-568h@2x.png in Resources */,
 				92F22DB017487A43007C9120 /* MainStoryboard.storyboard in Resources */,
+				92F22DBF17487D3B007C9120 /* CRDScrollSwitch.png in Resources */,
+				92F22DC017487D3B007C9120 /* CRDScrollSwitch@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +198,7 @@
 				92F22DA317487A43007C9120 /* main.m in Sources */,
 				92F22DA717487A43007C9120 /* DemoAppDelegate.m in Sources */,
 				92F22DB317487A43007C9120 /* DemoViewController.m in Sources */,
+				92F22DBE17487D3B007C9120 /* CRDScrollSwitch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
