@@ -1,10 +1,31 @@
 //
 //  CRDScrollSwitch.m
-//  ADVSwitch
+//  CRDScrollSwitch
 //
-//  Created by Corrado Ubezio on 07/05/13.
-//  Copyright (c) 2013 Corerd. All rights reserved.
-//
+/*
+ The MIT License
+ 
+ Copyright (c) 2013 Corrado Ubezio
+ https://github.com/corerd/
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+ */
 
 #import "CRDScrollSwitch.h"
 #import <QuartzCore/QuartzCore.h>
@@ -50,22 +71,22 @@
     UIImage *btnBgImage = [UIImage imageNamed:@"CRDScrollSwitch.png"];
     
     // UIButton setup 
-    self.btnSwitch = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.btnSwitch.frame = CGRectMake(0, 0,
+    self.slider = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.slider.frame = CGRectMake(0, 0,
                                       btnBgImage.size.width,
                                       btnBgImage.size.height);
-    [self.btnSwitch setBackgroundImage:btnBgImage
+    [self.slider setBackgroundImage:btnBgImage
                               forState:UIControlStateNormal];
-    [self.btnSwitch setBackgroundImage:btnBgImage
+    [self.slider setBackgroundImage:btnBgImage
                               forState:UIControlStateHighlighted];
-    [self.btnSwitch addTarget:self
+    [self.slider addTarget:self
                   action:@selector(swToggleState:)
         forControlEvents:UIControlEventTouchUpInside];
     
     // Setup the view geometry
-    CGFloat handleRadius = self.btnSwitch.frame.size.height / 2;
+    CGFloat handleRadius = self.slider.frame.size.height / 2;
     viewHeight = handleRadius * 2;
-    viewWidth = self.btnSwitch.frame.size.width/2 + handleRadius;
+    viewWidth = self.slider.frame.size.width/2 + handleRadius;
 
     // Setup Label for ON text
     CGRect  onTextRect = CGRectMake(handleRadius*0.50, 0,
@@ -81,7 +102,7 @@
                                                  blue:200.0/255
                                                 alpha:1.0]];
     [self.onText setShadowOffset:CGSizeMake(0, -1)];
-    [self.btnSwitch addSubview:self.onText];
+    [self.slider addSubview:self.onText];
 
     // Setup Label for OFF text
     CGRect  offTextRect = CGRectMake(viewWidth + handleRadius*0.25, 0,
@@ -97,9 +118,9 @@
                                                   blue:245.0/255
                                                  alpha:1.0]];
     [self.offText setShadowOffset:CGSizeMake(0, -1)];
-    [self.btnSwitch addSubview:self.offText];
+    [self.slider addSubview:self.offText];
 
-    [self addSubview:self.btnSwitch];
+    [self addSubview:self.slider];
      
     // The below statement changes the ScrollView
     // to have rounded ends like the UISwitch.
@@ -143,11 +164,17 @@
 #pragma mark -
 #pragma mark Actions
 
+/*!
+ Action handler for `UIControlEventTouchUpInside`.
+ 
+ Toggle the switch state and dispatch the action message for
+ `UIControlEventValueChanged` event.
+ */
 -(void)swToggleState:(id)sender
 {
     [self setOn:![self isOn]];
     
-    [self.btnSwitch sendActionsForControlEvents:UIControlEventValueChanged];
+    [self.slider sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 
