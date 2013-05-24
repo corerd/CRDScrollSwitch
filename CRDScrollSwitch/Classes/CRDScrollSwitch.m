@@ -84,13 +84,13 @@
         forControlEvents:UIControlEventTouchUpInside];
     
     // Setup the view geometry
-    CGFloat handleRadius = self.slider.frame.size.height / 2;
-    viewHeight = handleRadius * 2;
-    viewWidth = self.slider.frame.size.width/2 + handleRadius;
+    CGFloat thumbKnobRadius = self.slider.frame.size.height / 2;
+    viewHeight = thumbKnobRadius * 2;
+    viewWidth = self.slider.frame.size.width/2 + thumbKnobRadius;
 
     // Setup Label for ON text
-    CGRect  onTextRect = CGRectMake(handleRadius*0.50, 0,
-                                    viewWidth - handleRadius*2.50, viewHeight);
+    CGRect  onTextRect = CGRectMake(thumbKnobRadius*0.50, 0,
+                                    viewWidth - thumbKnobRadius*2.50, viewHeight);
     [self setOnText:[[UILabel alloc] initWithFrame:onTextRect]];
     [self.onText setBackgroundColor:[UIColor clearColor]];
     [self.onText setTextAlignment: NSTextAlignmentCenter];
@@ -105,8 +105,8 @@
     [self.slider addSubview:self.onText];
 
     // Setup Label for OFF text
-    CGRect  offTextRect = CGRectMake(viewWidth + handleRadius*0.25, 0,
-                                     viewWidth - handleRadius*2.75, viewHeight);
+    CGRect  offTextRect = CGRectMake(viewWidth + thumbKnobRadius*0.25, 0,
+                                     viewWidth - thumbKnobRadius*2.75, viewHeight);
     [self setOffText:[[UILabel alloc] initWithFrame:offTextRect]];
     [self.offText setBackgroundColor:[UIColor clearColor]];
     [self.offText setTextAlignment: NSTextAlignmentCenter];
@@ -151,7 +151,7 @@
 {
     _onState = swState;
     
-    // The diameter of the switch handle is given by the view height,
+    // The diameter of the switch thumb knob is given by the view height,
     // then we have to scroll the image by view widh minus view height
     // to put the switch in the off position.
     CGPoint scrollPoint = CGPointMake((_onState)? 0.0:

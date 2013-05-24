@@ -37,24 +37,33 @@
  a `UIControlEventValueChanged` event is generated, which results in the control
  (if properly configured) sending an action message.
  
+ 
  Extra features
  --------------
- - Custom text label for ON state
- - Custom text label for OFF state
- - Custom background image
+ - Custom text label for ON state.
+ - Custom text label for OFF state.
+ - Custom image representing the switch’s thumb knob and ON/OFF areas.
  
- Changing the background image, resizes the control frame to whatever you want.
  
  Usage
  -----
  To use it, add the files in the `Classes` folder to your project.
+
+ A default image is supplied in the file `CRDScrollSwitch.png`.
+
+ This image is moved back and forth over the ScrollView
+ to show the switch’s OFF and ON parts alternately.
  
- Create a custom UISwitch with the following items:
- - A UIScrollView
- - A UIButton
- - Two UILabels
- - A background image
- - A Boolean value
+ The image dimensions define the ScrollView frame in the following way,
+ whereas the thumb knob radius is given by image.height/2:
+ - ScrollView.height = image.height
+ - ScrollView.width = image.width/2 + thumbKnobRadius
+ 
+ The supplied `CRDScrollSwitch.png` image has dimension 150 × 28 pixels,
+ then the ScrollView frame will have 89 x 28 pixels.
+ 
+ Changing the image, resizes the control frame to whatever you want.
+ 
  
  CREDITS
  -------
