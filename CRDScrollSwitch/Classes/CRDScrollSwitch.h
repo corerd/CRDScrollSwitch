@@ -59,8 +59,8 @@
  - ScrollView.height = image.height
  - ScrollView.width = image.width/2 + thumbKnobRadius
  
- The supplied `CRDScrollSwitch.png` image has dimension 150 × 28 pixels,
- then the ScrollView frame will have 89 x 28 pixels.
+ For example, the supplied `CRDScrollSwitch.png` image has 150 × 28 pixels
+ dimension, then the ScrollView frame size is 89 x 28 pixels.
  
  Changing the image, resizes the control frame to whatever you want.
  
