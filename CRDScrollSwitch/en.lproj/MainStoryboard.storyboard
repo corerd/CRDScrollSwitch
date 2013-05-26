@@ -9,41 +9,83 @@
             <objects>
                 <viewController id="2" customClass="DemoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8DP-in-Wb4" customClass="CRDScrollSwitch">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ar-Xs-I7s" userLabel="CRDScrollSwitch" customClass="CRDScrollSwitch">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="89" type="user" id="GcM-X7-UK7"/>
-                                    <constraint firstAttribute="height" constant="28" type="user" id="OmP-mC-RBJ"/>
+                                    <constraint firstAttribute="height" constant="28" type="user" id="8ff-Xk-lDG"/>
+                                    <constraint firstAttribute="width" constant="89" type="user" id="Ydf-iy-DK2"/>
                                 </constraints>
                             </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4O-pm-O7R" userLabel="CustomCRDScrollSwitch" customClass="CRDScrollSwitch">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" type="user" id="dUp-VI-2pM"/>
+                                    <constraint firstAttribute="width" constant="89" type="user" id="g4e-eU-VvI"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CRDScrollSwitch Demo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNP-sc-mTQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Default" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaB-gm-tuc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="hGt-eX-AbW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="On State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsf-X4-L3A">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Custom text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63k-Ir-F95">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Off State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-de-fmU">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8DP-in-Wb4" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="user" id="SCy-Jm-QGM"/>
-                            <constraint firstItem="8DP-in-Wb4" firstAttribute="top" secondItem="3" secondAttribute="top" constant="57" type="user" id="wT9-Me-Lmz"/>
+                            <constraint firstItem="1ar-Xs-I7s" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="user" id="0zB-U0-lDJ"/>
+                            <constraint firstItem="uaB-gm-tuc" firstAttribute="centerX" secondItem="JNP-sc-mTQ" secondAttribute="centerX" type="default" id="14S-38-uFZ"/>
+                            <constraint firstItem="JNP-sc-mTQ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="217-7k-qwI"/>
+                            <constraint firstItem="1ar-Xs-I7s" firstAttribute="top" secondItem="uaB-gm-tuc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3s8-6g-49W"/>
+                            <constraint firstItem="63k-Ir-F95" firstAttribute="top" secondItem="3" secondAttribute="top" constant="196" id="58e-dI-02o"/>
+                            <constraint firstItem="uaB-gm-tuc" firstAttribute="centerX" secondItem="1ar-Xs-I7s" secondAttribute="centerX" type="default" id="5Zp-xI-faN"/>
+                            <constraint firstItem="SOc-de-fmU" firstAttribute="top" secondItem="p4O-pm-O7R" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OHe-fZ-5aD"/>
+                            <constraint firstItem="Zsf-X4-L3A" firstAttribute="top" secondItem="1ar-Xs-I7s" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Pys-ne-75E"/>
+                            <constraint firstItem="p4O-pm-O7R" firstAttribute="leading" secondItem="1ar-Xs-I7s" secondAttribute="leading" type="default" id="VK9-VY-3Qy"/>
+                            <constraint firstItem="uaB-gm-tuc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="76" id="XVo-Ip-rTB"/>
+                            <constraint firstItem="63k-Ir-F95" firstAttribute="centerX" secondItem="p4O-pm-O7R" secondAttribute="centerX" type="default" id="flY-0T-c39"/>
+                            <constraint firstItem="SOc-de-fmU" firstAttribute="leading" secondItem="Zsf-X4-L3A" secondAttribute="leading" type="default" id="gfK-BW-kV5"/>
+                            <constraint firstItem="p4O-pm-O7R" firstAttribute="top" secondItem="63k-Ir-F95" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hzV-7n-ECR"/>
+                            <constraint firstItem="Zsf-X4-L3A" firstAttribute="centerX" secondItem="1ar-Xs-I7s" secondAttribute="centerX" type="default" id="x3L-7M-H2g"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customScrollSwitch" destination="p4O-pm-O7R" id="29e-SX-BsH"/>
+                        <outlet property="defaultScrollSwitch" destination="1ar-Xs-I7s" id="JN1-Z2-GkQ"/>
+                        <outlet property="lblCustomSwitchState" destination="SOc-de-fmU" id="kOp-Vs-tF4"/>
+                        <outlet property="lblDefaultSwitchState" destination="Zsf-X4-L3A" id="XKj-dR-tBz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="83" y="88"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CRDScrollSwitch" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CRDScrollSwitch.h"/>
-        </class>
-        <class className="DemoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DemoViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

@@ -31,7 +31,7 @@
  CRDScrollSwitch Class Reference
  
  The `CRDScrollSwitch` inherits from `UIScrollView` and is a drop in replacement
- for `UISwitch` that allows to user to customize its appearance.
+ for `UISwitch` that allows the user to customize its appearance.
  
  As with `UISwitch`, when the user flips the switch control
  a `UIControlEventValueChanged` event is generated, which results in the control
@@ -60,7 +60,7 @@
  - ScrollView.width = image.width/2 + thumbKnobRadius
  
  For example, the supplied `CRDScrollSwitch.png` image has 150 × 28 pixels
- dimension, then the ScrollView frame size is 89 x 28 pixels.
+ dimension, then the ScrollView frame size will be 89 x 28 pixels.
  
  Changing the image, resizes the control frame to whatever you want.
  
@@ -83,7 +83,7 @@
  
  Set to `YES` By default.
  */
-@property (nonatomic, getter=isOn) BOOL on;
+@property (nonatomic, assign, getter=isOn) BOOL on;
 
 
 /*!

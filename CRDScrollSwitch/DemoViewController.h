@@ -28,7 +28,13 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "CRDScrollSwitch.h"
 
 @interface DemoViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet CRDScrollSwitch *defaultScrollSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *lblDefaultSwitchState;
+@property (weak, nonatomic) IBOutlet CRDScrollSwitch *customScrollSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *lblCustomSwitchState;
 
 @end

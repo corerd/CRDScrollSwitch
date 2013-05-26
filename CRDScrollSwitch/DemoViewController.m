@@ -33,18 +33,59 @@
 
 @end
 
+
+#pragma mark -
+#pragma mark Initialization code
+
 @implementation DemoViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Setup default CRDScrollSwitch
+    [self.defaultScrollSwitch.slider addTarget:self
+                                       action:@selector(defaultSwitchValueChanged:)
+                             forControlEvents:UIControlEventValueChanged];
+
+    // Setup custom CRDScrollSwitch
+    self.customScrollSwitch.on = NO;
+    [self.customScrollSwitch.onText setText:@"SHOW"];
+    [self.customScrollSwitch.offText setText:@"HIDE"];
+    [self.customScrollSwitch.slider addTarget:self
+                                    action:@selector(customSwitchValueChanged:)
+                          forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark -
+#pragma mark Actions
+
+-(void)defaultSwitchValueChanged:(id)sender
+{
+    if ([self.defaultScrollSwitch isOn]) {
+        [self.lblDefaultSwitchState setText:@"On State"];
+    }
+    else {
+        [self.lblDefaultSwitchState setText:@"Off State"];
+    }
+}
+
+-(void)customSwitchValueChanged:(id)sender
+{
+    if ([self.customScrollSwitch isOn]) {
+        [self.lblCustomSwitchState setText:@"On State"];
+    }
+    else {
+        [self.lblCustomSwitchState setText:@"Off State"];
+    }
 }
 
 @end
