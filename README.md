@@ -2,8 +2,9 @@ CRDScrollSwitch for iOS
 =======================
 
 The `CRDScrollSwitch` inherits from `UIScrollView` and is a drop in replacement
-for `UISwitch` that allows to user to customize its appearance.
+for `UISwitch` that allows the user to customize its appearance.
  
+![user input clear](http://corerd.github.com/CRDScrollSwitch/doc/images/screenshot.jpg)
  
 Extra features
 --------------
@@ -16,23 +17,11 @@ Usage
 -----
 To use it, add the files in the `Classes` folder to your project.
 
-A default image is supplied in the file `CRDScrollSwitch.png`.
-
-This image is moved back and forth over the ScrollView
-to show the switch’s OFF and ON parts alternately.
- 
-The image dimensions define the ScrollView frame in the following way,
-whereas the thumb knob radius is given by image.height/2:
-- ScrollView.height = image.height
-- ScrollView.width = image.width/2 + thumbKnobRadius
- 
-For example, the supplied `CRDScrollSwitch.png` image has 150 × 28 pixels
-dimension, then the ScrollView frame size is 89 x 28 pixels.
- 
-Changing the image, resizes the control frame to whatever you want.
+In this [Wiki page](https://github.com/corerd/CRDScrollSwitch/wiki)
+it is dealt how to add a `CRDScrollSwitch` object using Interface Builder.
 
 In the `Gimp` folder you can find the GIMP image file from which
-the default image has been converted.
+the default `CRDScrollSwitch image` has been converted.
  
  
 CREDITS
