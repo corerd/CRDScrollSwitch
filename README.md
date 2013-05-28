@@ -15,6 +15,10 @@ The instructions can be found at
 [Creating Project Pages manually]
 (https://help.github.com/articles/creating-project-pages-manually).
 
+Since [git 1.7.10](https://lkml.org/lkml/2012/3/28/418) (April 2012)
+git allows you to clone only one branch by means of the new `--single-branch`
+option.
+
 
 CREDITS
 -------
