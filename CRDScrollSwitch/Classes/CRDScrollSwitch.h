@@ -64,6 +64,8 @@
  
  Changing the image, resizes the control frame to whatever you want.
  
+ In this [Wiki page](https://github.com/corerd/CRDScrollSwitch/wiki)
+ it is dealt how to add a `CRDScrollSwitch` object using Interface Builder.
  
  CREDITS
  -------
