@@ -22,6 +22,11 @@ it is dealt how to add a `CRDScrollSwitch` object using Interface Builder.
 
 In the `Gimp` folder you can find the GIMP image file from which
 the default `CRDScrollSwitch image` has been converted.
+
+The `CRDScrollSwitch` class is deployed together a demo iPhone app to show
+various use case scenarios. It has been developed as an Xcode 4.6.2 project
+targeting iOS 6.1.
+
  
  
 CREDITS
